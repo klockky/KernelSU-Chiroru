@@ -1,0 +1,29 @@
+name: Manager enrollment reference (host only)
+
+on:
+  pull_request:
+    paths:
+      - 'docs/manager-enrollment/**'
+      - '.github/workflows/manager-enrollment-reference.yml'
+  push:
+    paths:
+      - 'docs/manager-enrollment/**'
+      - '.github/workflows/manager-enrollment-reference.yml'
+
+permissions:
+  contents: read
+
+jobs:
+  reference-policy:
+    name: Reference model / ${{ matrix.compiler }} (not kernel validation)
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    strategy:
+      matrix:
+        compiler: [gcc, clang]
+    steps:
+      - uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4.2.2
+        with:
+          persist-credentials: false
+      - name: Compile and test host-only reference with ASan and UBSan
+        run: python3 docs/manager-enrollment/run_checks.py --cc "${{ matrix.compiler }}" --sanitize
