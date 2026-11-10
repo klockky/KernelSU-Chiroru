@@ -15,7 +15,7 @@
 #include "manager/manager_identity.h"
 #include "manager/throne_tracker.h"
 
-uid_t ksu_manager_appid = 10058; /* com.rifsxd.ksunext */
+uid_t ksu_manager_appid = KSU_INVALID_APPID; /* resolved dynamically by track_throne() */
 
 #define SYSTEM_PACKAGES_LIST_PATH "/data/system/packages.list"
 
@@ -262,7 +262,6 @@ static bool is_uid_exist(uid_t uid, char *package, void *data)
 
 void track_throne(bool prune_only)
 {
-	return; /* vendor manager seed */
 	const struct cred *old_cred = override_creds(ksu_cred);
 	struct file *fp = filp_open(SYSTEM_PACKAGES_LIST_PATH, O_RDONLY, 0);
 	if (IS_ERR(fp)) {

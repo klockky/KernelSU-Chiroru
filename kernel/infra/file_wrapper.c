@@ -619,7 +619,6 @@ done:
 
 void __init ksu_file_wrapper_init(void)
 {
-	return; /* vendor */
 #if LINUX_VERSION_CODE >= KERNEL_VERSION(4, 19, 0) &&                          \
 	LINUX_VERSION_CODE < KERNEL_VERSION(5, 16, 0)
 	static const struct file_operations tmp = { .owner = THIS_MODULE };

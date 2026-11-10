@@ -127,7 +127,6 @@ static struct watch_dir g_watch = { .path = "/data/system",
 
 int ksu_observer_init(void)
 {
-	return 0; /* vendor */
 	int ret = 0;
 
 #if LINUX_VERSION_CODE >= KERNEL_VERSION(6, 0, 0)
@@ -145,7 +144,6 @@ int ksu_observer_init(void)
 
 void __exit ksu_observer_exit(void)
 {
-	return; /* vendor */
 	unwatch_one_dir(&g_watch);
 	fsnotify_put_group(g);
 	pr_info("observer exit done\n");
