@@ -1,0 +1,15 @@
+{
+  "device": "YNDX-00055",
+  "codename": "chiron",
+  "firmware": "5000001289",
+  "chiroruVersion": "0.8.1",
+  "chiroruVersionCode": 51,
+  "managerVersion": "3.4.2",
+  "managerVersionCode": 33355,
+  "kernelRelease": "5.4.125-android11-2-g601513d4b115-ab5000001289",
+  "kernelSuRevision": "10ed3691ec92e3997144ca91ded20b27c4be1efd",
+  "chiroruRevision": "7230a7fa1389ee66b10caab3d71b0adbce7ebece",
+  "moduleSizeBytes": 275152,
+  "moduleSha256": "4e11da46cd8088c7a6d8412a49764db5ef9741b6cfb012d54959603db90454b4",
+  "releasedAssetMatchesDevice": true
+}

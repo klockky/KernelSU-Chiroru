@@ -1,0 +1,39 @@
+Exact released module; .text check_block.constprop.0 starts at 0x2ee8.
+    30cc:	90000014 	adrp	x20, 0 <arch_local_irq_save>
+			30cc: R_AARCH64_ADR_PREL_PG_HI21	.rodata.str1.8+0x940
+    30d0:	91000294 	add	x20, x20, #0x0
+			30d0: R_AARCH64_ADD_ABS_LO12_NC	.rodata.str1.8+0x940
+    30d4:	b9401ff5 	ldr	w21, [sp, #28]
+    30d8:	aa1403e0 	mov	x0, x20
+    30dc:	52800002 	mov	w2, #0x0                   	// #0
+    30e0:	52800001 	mov	w1, #0x0                   	// #0
+    30e4:	94000000 	bl	0 <crypto_alloc_shash>
+			30e4: R_AARCH64_CALL26	crypto_alloc_shash
+    30e8:	aa0003f3 	mov	x19, x0
+    30ec:	b140041f 	cmn	x0, #0x1, lsl #12
+    30f0:	540004e8 	b.hi	318c <check_block.constprop.0+0x2a4>  // b.pmore
+    30f4:	b9400000 	ldr	w0, [x0]
+    30f8:	5281b801 	mov	w1, #0xdc0                 	// #3520
+    30fc:	11002000 	add	w0, w0, #0x8
+    3100:	93407c00 	sxtw	x0, w0
+    3104:	94000000 	bl	0 <__kmalloc>
+			3104: R_AARCH64_CALL26	__kmalloc
+    3108:	aa0003f4 	mov	x20, x0
+    310c:	b4000520 	cbz	x0, 31b0 <check_block.constprop.0+0x2c8>
+    3110:	f9000013 	str	x19, [x0]
+    3114:	b140041f 	cmn	x0, #0x1, lsl #12
+    3118:	540004c8 	b.hi	31b0 <check_block.constprop.0+0x2c8>  // b.pmore
+    311c:	2a1503e2 	mov	w2, w21
+    3120:	9102a3e1 	add	x1, sp, #0xa8
+    3124:	91011fe3 	add	x3, sp, #0x47
+    3128:	94000000 	bl	0 <crypto_shash_digest>
+			3128: R_AARCH64_CALL26	crypto_shash_digest
+    312c:	2a0003f5 	mov	w21, w0
+    3130:	aa1403e0 	mov	x0, x20
+    3134:	94000000 	bl	0 <kfree>
+			3134: R_AARCH64_CALL26	kfree
+    3138:	91020261 	add	x1, x19, #0x80
+    313c:	aa1303e0 	mov	x0, x19
+    3140:	94000000 	bl	0 <crypto_destroy_tfm>
+			3140: R_AARCH64_CALL26	crypto_destroy_tfm
+    3144:	350002d5 	cbnz	w21, 319c <check_block.constprop.0+0x2b4>
