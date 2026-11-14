@@ -1,0 +1,29 @@
+<1>[  138.462674@0]    ESR = 0x8600000f
+<1>[  138.462678@0]    EC = 0x21: IABT (current EL), IL = 32 bits
+<4>[  138.462862@0]  pc : 0xffffff900fcadf28
+<4>[  138.462869@0]  lr : crypto_destroy_tfm+0x68/0xac
+<4>[  138.463986@0]  Call trace:
+<6>[  138.463990@0]  [ffffffc0216aad70+1248][<ffffff900fcadf28>] 0xffffff900fcadf28
+<6>[  138.464008@0]  [ffffffc0216ab250+ 144][<ffffffd092d2abc4>] check_block.constprop.0+0x25c/0x2e4 [kernelsu]
+<6>[  138.464021@0]  [ffffffc0216ab2e0+ 480][<ffffffd092d2b1dc>] is_manager_apk+0x49c/0x500 [kernelsu]
+<6>[  138.464034@0]  [ffffffc0216ab4c0+ 176][<ffffffd092d2b66c>] my_actor+0x2a0/0x454 [kernelsu]
+<6>[  138.464040@0]  [ffffffc0216ab570+  96][<ffffffd1103c5294>] ext4_readdir+0x960/0xb18
+<6>[  138.464045@0]  [ffffffc0216ab5d0+ 624][<ffffffd11031874c>] iterate_dir+0xd8/0x188
+<6>[  138.464058@0]  [ffffffc0216ab840+ 416][<ffffffd092d2ba2c>] search_manager+0x20c/0x3a0 [kernelsu]
+<6>[  138.464071@0]  [ffffffc0216ab9e0+  96][<ffffffd092d2bef8>] track_throne+0x338/0x360 [kernelsu]
+<6>[  138.464083@0]  [ffffffc0216aba40+ 432][<ffffffd092d62264>] kernelsu_init+0xfc/0x154 [kernelsu]
+<6>[  138.464091@0]  [ffffffc0216abbf0+  80][<ffffffd11008bc70>] do_one_initcall+0x140/0x2a8
+<6>[  138.464097@0]  [ffffffc0216abc40+ 256][<ffffffd1101aab50>] do_init_module+0x5c/0x21c
+<6>[  138.464101@0]  [ffffffc0216abd40+ 240][<ffffffd1101aa9f0>] load_module+0x3a40/0x3ab0
+<6>[  138.464105@0]  [ffffffc0216abe30+  48][<ffffffd1101a5678>] __arm64_sys_init_module+0x9c/0xd0
+<6>[  138.464110@0]  [ffffffc0216abe60+  64][<ffffffd1100caac0>] el0_svc_common+0xb0/0x188
+<6>[  138.464115@0]  [ffffffc0216abea0+ 336][<ffffffd1100caa00>] el0_svc_handler+0x78/0x88
+<6>[  138.464119@0]  [ffffffc0216abff0+   0][<ffffffd110083f48>] el0_svc+0x8/0xc
+<0>[  138.464124@0]  Code: 00000000 00000000 00000000 00000000 (34f5cfa8) 
+<4>[  138.464128@0]  ---[ end trace 635aec78f5dbf1b6 ]---
+<0>[  138.479911@0]  Kernel panic - not syncing: Fatal exception
+<2>[  138.479921@0]  SMP: stopping secondary CPUs
+<0>[  138.479929@0]  Kernel Offset: 0x1100000000 from 0xffffffc010000000
+<0>[  138.479932@0]  PHYS_OFFSET: 0xfffffff000000000
+<0>[  138.479937@0]  CPU features: 0x00010002,21882004
+<0>[  138.479940@0]  Memory Limit: none

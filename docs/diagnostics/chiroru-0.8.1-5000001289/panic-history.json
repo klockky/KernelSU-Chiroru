@@ -1,0 +1,42 @@
+[
+  {
+    "entry": "2026-11-14 17:28:24 SYSTEM_LAST_KMSG (compressed text, 14438 bytes)",
+    "frames": [
+      "[  395.432992@0] <4> lr : check_block.constprop.0+0x25c/0x2e4 [kernelsu]",
+      "[  395.434005@0] <6> [ffffffc0217c7250+ 144][<ffffffde92d2abc4>] check_block.constprop.0+0x25c/0x2e4 [kernelsu]",
+      "[  395.453022@0] <0> Kernel panic - not syncing: Fatal exception"
+    ]
+  },
+  {
+    "entry": "2026-11-14 17:30:18 SYSTEM_LAST_KMSG (compressed text, 14397 bytes)",
+    "frames": [
+      "[  103.608531@0] <4> lr : check_block.constprop.0+0x25c/0x2e4 [kernelsu]",
+      "[  103.609540@0] <6> [ffffffc021cef250+ 144][<ffffffd692d2abc4>] check_block.constprop.0+0x25c/0x2e4 [kernelsu]",
+      "[  103.626226@0] <0> Kernel panic - not syncing: Fatal exception"
+    ]
+  },
+  {
+    "entry": "2026-11-14 17:55:51 SYSTEM_LAST_KMSG (compressed text, 14617 bytes)",
+    "frames": [
+      "[ 1521.109487@1] <4> lr : crypto_destroy_tfm+0x68/0xac",
+      "[ 1521.111027@1] <6> [ffffffc02078f3e0+ 144][<ffffffeb92d2abc4>] check_block.constprop.0+0x25c/0x2e4 [kernelsu]",
+      "[ 1521.131003@1] <0> Kernel panic - not syncing: Fatal exception"
+    ]
+  },
+  {
+    "entry": "2026-11-14 18:13:03 SYSTEM_LAST_KMSG (compressed text, 16129 bytes)",
+    "frames": [
+      "[  150.567837@0] <4> lr : check_block.constprop.0+0x25c/0x2e4 [kernelsu]",
+      "[  150.568925@0] <6> [ffffffc0209cf250+ 144][<ffffffd892d2abc4>] check_block.constprop.0+0x25c/0x2e4 [kernelsu]",
+      "[  150.586253@0] <0> Kernel panic - not syncing: Fatal exception"
+    ]
+  },
+  {
+    "entry": "2026-11-14 18:20:50 SYSTEM_LAST_KMSG (compressed text, 14777 bytes)",
+    "frames": [
+      "[  138.462869@0] <4> lr : crypto_destroy_tfm+0x68/0xac",
+      "[  138.464008@0] <6> [ffffffc0216ab250+ 144][<ffffffd092d2abc4>] check_block.constprop.0+0x25c/0x2e4 [kernelsu]",
+      "[  138.479911@0] <0> Kernel panic - not syncing: Fatal exception"
+    ]
+  }
+]
